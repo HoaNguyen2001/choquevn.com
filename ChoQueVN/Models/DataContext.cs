@@ -1,0 +1,19 @@
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ChoQueVN.Models
+{
+    public class DataContext : DbContext
+    {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("server=HOANGUYEN;database=choqueVN.Com;UID=sa;Password=Ta0lacuamay1;");
+        }
+
+        //khai bao su dung class o day
+        public DbSet<User> Users { get; set; }
+    }
+}

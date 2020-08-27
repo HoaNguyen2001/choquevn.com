@@ -14,7 +14,11 @@ G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Ch
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\ChoQueVN.TagHelpers.input.cache
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\ChoQueVN.TagHelpers.output.cache
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\ChoQueVN.RazorCoreGenerate.cache
+G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\_Shared\_LayoutAdmin.cshtml.g.cs
+G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.cshtml.g.cs
+G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Views\_Shared\_LayoutHome.cshtml.g.cs
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\ChoQueVN.RazorTargetAssemblyInfo.cache
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\ChoQueVN.RazorTargetAssemblyInfo.cs
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\ChoQueVN.Views.pdb
@@ -22,8 +26,9 @@ G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Ch
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\ChoQueVN.pdb
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\ChoQueVN.genruntimeconfig.cache
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\ChoQueVN.csproj.CopyComplete
-G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.cshtml.g.cs
-G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Views\_Shared\_LayoutHome.cshtml.g.cs
+G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
+G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Product\ProductCategory.cshtml.g.cs
+G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Product\Product.cshtml.g.cs
+G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
+G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\User\AddEdit.cshtml.g.cs
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\ChoQueVN.csproj.CoreCompileInputs.cache
-G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
-G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs

@@ -3,6 +3,21 @@
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/_Shared/_LayoutAdmin.cshtml";
 }
-
-<h2>Index</h2>
+<form method="post" action="/Admin/Home/Them">
+    <table>
+        <tr class="row">
+            <td class="col-sm-5">Nhap ten</td>
+            <td class="col-sm-2"><input type="text" name="Name" /></td>
+        </tr>
+        <tr class="row">
+            <td class="col-sm-5">Chon file</td>
+            <td class="col-sm-2"><input type="file" name="file" /></td>
+        </tr>
+        <tr class="row">
+            <td>
+                <input type="submit" value="Gui"/>
+            </td>
+        </tr>
+    </table>
+</form>
 

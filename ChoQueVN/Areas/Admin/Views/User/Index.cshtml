@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "Danh sách tài khoản";
+    Layout = "~/Areas/Admin/Views/_Shared/_LayoutAdmin.cshtml";
+    @using ChoQueVN.Models;
+    @using System.Linq;
+    @* khai bao de su dung phan trang *@
+    @using X.PagedList.Mvc.Core;
+    @* khai bao kieu du lieu cua model *@
+    @model X.PagedList.IPagedList<User>
+    var msg = ViewBag.msg;
+}
+<section class="container-fluid">
+    <div class="row">
+        <h3 class="col-sm-10">
+            Danh sách tài khoản
+        </h3>
+        <form action="/Admin/User/AddEdit">
+            <input type="submit" class="btn btn-primary" value="Thêm tài khoản" />
+        </form>
+    </div>
+    <div class="row form-group">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Họ tên</th>
+                    <th scope="col">Tài khoản</th>
+                    <th scope="col">Tác vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row"></th>
+                        <td>@item.Name</td>
+                        <td>@item.Account</td>
+                        <td style="text-align:center;">
+                            <a href="/Admin/User/AddEdit?id=@item.ID">Sửa</a>&nbsp;&nbsp;&nbsp;
+                            <a href="/Admin/User/Delete?id=@item.ID" onclick="Remove(this,@item.ID)">Xoá</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @* thuc hien phan trang *@
+        @* /User/Index?page=1,2,3... *@
+        @* Url.Action("ten action","ten controller", new { danhsachbien }) *@
+        @{
+            //lay bien key truyen tu url
+            string _key = Context.Request.Query["key"];
+        }
+        @Html.PagedListPager(Model, page => Url.Action("Index", "User", new { page, key = _key }))
+    </div>
+</section>
+
+<script>
+    var Remove = function (obj, id) {
+        //debugger
+        var host = window.location.host;
+        var name = obj.parentNode.parentNode.children[1].textContent;
+        if (window.confirm("Ban muon xoa " + name + " ?"))
+            window.location.href = host + "/Admin/User/Delele?id=" + id;
+    }
+</script>
+

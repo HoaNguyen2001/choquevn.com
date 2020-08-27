@@ -13,5 +13,11 @@ namespace ChoQueVN.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public IActionResult Them()
+        {
+            var name = Request.Form["Name"].ToString();
+            return Redirect("/Admin/Home");
+        }
     }
 }
