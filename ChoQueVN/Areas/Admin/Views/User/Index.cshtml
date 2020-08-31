@@ -8,7 +8,7 @@
     @using X.PagedList.Mvc.Core;
     @* khai bao kieu du lieu cua model *@
     @model X.PagedList.IPagedList<User>
-    var msg = ViewBag.msg;
+    @using X.PagedList.Mvc.Common;
 }
 <section class="container-fluid">
     <div class="row">
@@ -21,12 +21,12 @@
     </div>
     <div class="row form-group">
         <table class="table table-striped">
-            <thead>
+            <thead style="background-color:#34e9e9">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Họ tên</th>
                     <th scope="col">Tài khoản</th>
-                    <th scope="col">Tác vụ</th>
+                    <th scope="col" class="text-center">Tác vụ</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,7 +38,7 @@
                         <td>@item.Account</td>
                         <td style="text-align:center;">
                             <a href="/Admin/User/AddEdit?id=@item.ID">Sửa</a>&nbsp;&nbsp;&nbsp;
-                            <a href="/Admin/User/Delete?id=@item.ID" onclick="Remove(this,@item.ID)">Xoá</a>
+                            <a href="#" onclick="Remove(this,@item.ID)">Xoá</a>
                         </td>
                     </tr>
                 }
@@ -51,7 +51,11 @@
             //lay bien key truyen tu url
             string _key = Context.Request.Query["key"];
         }
-        @Html.PagedListPager(Model, page => Url.Action("Index", "User", new { page, key = _key }))
+        @Html.PagedListPager(Model, page => Url.Action("Index", "User", new { page }), new PagedListRenderOptions
+           {
+               LiElementClasses = new string[] { "page-item" },
+               PageClasses = new string[] { "page-link" }
+           })
     </div>
 </section>
 

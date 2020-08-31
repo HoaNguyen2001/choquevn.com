@@ -19,18 +19,18 @@ namespace ChoQueVN.Middlewares
 
         public Task Invoke(HttpContext httpContext)
         {
-            //Lấy đường dẫn url
-            var path = httpContext.Request.Path.ToString();
-            //nếu path bắt đầu bằng chữ/admin thì kiểm tra xem session đã tồn tại chưa => nếu chưa tồn tại thì di chuyển đến trang login
-            path = path.ToLower();
-            if (path != null && path.StartsWith("/admin"))
-            {
-                if (httpContext.Session.GetString("Account") == null)
-                {
-                    //di chuyển đến trang login
-                    httpContext.Response.Redirect("/login");
-                }
-            }
+            ////Lấy đường dẫn url
+            //var path = httpContext.Request.Path.ToString();
+            ////nếu path bắt đầu bằng chữ/admin thì kiểm tra xem session đã tồn tại chưa => nếu chưa tồn tại thì di chuyển đến trang login
+            //path = path.ToLower();
+            //if (path != null && path.StartsWith("/admin"))
+            //{
+            //    if (httpContext.Session.GetString("Account") == null)
+            //    {
+            //        //di chuyển đến trang login
+            //        httpContext.Response.Redirect("/login");
+            //    }
+            //}
             return _next(httpContext);
         }
     }

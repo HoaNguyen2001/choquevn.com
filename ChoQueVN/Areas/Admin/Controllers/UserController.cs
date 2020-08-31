@@ -49,8 +49,9 @@ namespace ChoQueVN.Areas.Admin.Controllers
                 ViewBag.Header = "Sửa thông tin tài khoản";
                 ViewBag.ActionForm = "/Admin/User/AddEditPost?ID="+ID;
                 var user = db.Users.Where(x => x.ID == ID).FirstOrDefault();
-                ViewBag.User = user;
-                return View();
+                var _user = user;
+                _user.Password = user.Password==null?"": Security.Decrypt(user.Password);
+                return View("AddEdit",_user);
             }
         }
 
@@ -62,14 +63,13 @@ namespace ChoQueVN.Areas.Admin.Controllers
             var account = Request.Form["Account"].ToString();
             var password = Request.Form["Password"].ToString();
 
-            if (db.Users.Where(x => x.Account.Equals(account)).Any())//tafi khoan trung thi khong cho them
-            {
-                ViewBag.Error = "Tài khoản đã được sử dụng";
-                return View("AddEdit");
-            }  
-
             if (ID == 0)
             {
+                if (db.Users.Where(x => x.Account.Equals(account)).Any())//tafi khoan trung thi khong cho them
+                {
+                    ViewBag.Error = "Tài khoản đã được sử dụng";
+                    return View("AddEdit");
+                }
                 var user = new User();
                 user.Name = name;
                 user.Account = account;

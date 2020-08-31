@@ -32,3 +32,5 @@ G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Ra
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\User\AddEdit.cshtml.g.cs
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\ChoQueVN.csproj.CoreCompileInputs.cache
 G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Views\_Shared\_Layout.cshtml.g.cs
+G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Product\AddEditCategory.cshtml.g.cs
+G:\DHCNHN\Nam3_KiHe\ASP.NET\BTL\ChoqueVN.Com\ChoQueVN\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Views\Product\AddEdit.cshtml.g.cs
