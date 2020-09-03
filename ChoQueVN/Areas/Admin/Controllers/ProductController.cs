@@ -35,7 +35,7 @@ namespace ChoQueVN.Areas.Admin.Controllers
             string where = Request.Query["where"];
             //---
             //quy dinh so ban ghi tren mot trang
-            int pageSize = 6;
+            int pageSize = 12;
             //kiem tra neu co bien page truyen vao thi lay no
             //con khong thi lay gia tri 1
             int pageNumber = page.HasValue ? Convert.ToInt32(page) : 1;
@@ -225,6 +225,7 @@ namespace ChoQueVN.Areas.Admin.Controllers
                 item.Content = Content;
                 item.CategoryID = int.Parse(CategoryID);
                 item.Image = ImgURL(formFile);
+                item.Hot = isHot;
 
                 db.Products.Add(item);
                 db.SaveChanges();

@@ -18,6 +18,10 @@
 
 <section class="container-fluid">
     <div class="row">
+        <input class="form-control col-sm-4" id="myInput" type="text"
+               placeholder="Tìm kiếm ...">
+    </div>
+    <div class="row">
         <h3 class="col-sm-10">
             Danh sách danh mục sản phẩm
         </h3>
@@ -26,7 +30,7 @@
         </form>
     </div>
     <div class="row form-group" style="padding-top:10px">
-        <table class="table table-striped">
+        <table class="table table-bordered table-striped">
             <thead style="background-color:#34e9e9">
                 <tr>
                     <th scope="col">#</th>
@@ -40,7 +44,7 @@
                     <th scope="col" class="text-center">Tác vụ</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="#myTable">
                 @foreach (var item in Model)
                     {
                     <tr>
@@ -58,7 +62,7 @@
                         <td>@item.Price</td>
                         <td>@item.Discount</td>
                         <td class="text-center">
-                            <input type="checkbox" @if (item.Hot) { <text> checked</text> }>
+                            <input type="checkbox" @if (item.Hot) { <text> checked</text> } disabled>
                         </td>
                         <td style="text-align:center;">
                             <a href="/Admin/Product/AddEdit?id=@item.ID">Sửa</a>&nbsp;&nbsp;&nbsp;
@@ -76,7 +80,7 @@
             //lay bien key truyen tu url
             string _key = Context.Request.Query["key"];
         }
-        @Html.PagedListPager(Model, page => Url.Action("Index", "User", new { page}), new PagedListRenderOptions
+        @Html.PagedListPager(Model, page => Url.Action("Product", "Product", new { page}), new PagedListRenderOptions
            {
                LiElementClasses = new string[] { "page-item" },
                PageClasses = new string[] { "page-link" }
@@ -93,5 +97,14 @@
             debugger
             window.location.href = host + "/Admin/Product/Delele?id=" + id;
     }
+
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
 </script>
 

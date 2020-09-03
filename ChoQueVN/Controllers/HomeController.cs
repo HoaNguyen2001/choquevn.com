@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.WebSockets;
 using System.Threading.Tasks;
+using ChoQueVN.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,9 +11,24 @@ namespace ChoQueVN.Controllers
 {
     public class HomeController : Controller
     {
+        DataContext db = new DataContext();
         // GET: HomeController
         public ActionResult Index()
         {
+            var listProducts = db.Products.OrderByDescending(x => x.ID);
+            var listCategories = db.ProductCategories.OrderByDescending(x => x.ID);
+
+            ViewBag.hotProducts = db.Products.Where(x=>x.Hot==true).Take(12).OrderByDescending(x => x.ID);
+            ViewBag.Categories = listCategories.ToList();
+
+            //sản phẩm và đồ uống giảm cân ID=10
+            ViewBag.Products10 = db.Products.Where(x =>db.ProductCategories.Where(o=>o.ParentID==10).Select(o=>o.ID).Contains(x.CategoryID)).Take(12).OrderByDescending(x => x.ID);
+
+            //thực dưỡng và ăn chay ID=11
+            ViewBag.Products10 = db.Products.Where(x => db.ProductCategories.Where(o => o.ParentID == 11).Select(o => o.ID).Contains(x.CategoryID)).Take(4).OrderByDescending(x => x.ID);
+
+            //Hạt dinh dưỡng ID=12
+            ViewBag.Products10 = db.Products.Where(x => db.ProductCategories.Where(o => o.ParentID == 12).Select(o => o.ID).Contains(x.CategoryID)).Take(4).OrderByDescending(x => x.ID);
             return View();
         }
 

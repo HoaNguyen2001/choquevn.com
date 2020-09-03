@@ -35,7 +35,7 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <th scope="row"></th>
+                        <th scope="row">@item.ID</th>
                         <td>@item.Name</td>
                         <td>@item.ParentName</td>
                         <td style="text-align:center;">
@@ -53,7 +53,7 @@
             //lay bien key truyen tu url
             string _key = Context.Request.Query["key"];
         }
-        @Html.PagedListPager(Model, page => Url.Action("Index", "User", new { page }), new PagedListRenderOptions
+        @Html.PagedListPager(Model, page => Url.Action("ProductCategory", "Product", new { page }), new PagedListRenderOptions
            {
                LiElementClasses = new string[] { "page-item" },
                PageClasses = new string[] { "page-link" }

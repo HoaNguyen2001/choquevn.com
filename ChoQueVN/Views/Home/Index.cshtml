@@ -3,146 +3,263 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/_Shared/_Layout.cshtml";
 }
-    <section>
-        <div class="container">
-            <div class="col-sm-9 row">
+@using System.IO;
 
-                <div class="col-sm-12">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                            <li data-target="#myCarousel" data-slide-to="3"></li>
-                        </ol>
+<section>
+    <div class="container">
+        <div class="col-sm-9 row">
 
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="~/Images/images_layout/hinh-nen-sieu-xe-full-hd-cho-laptop-3.jpg" style="width:1140px;height:200px;" />
-                            </div>
+            <div class="col-sm-12">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
 
-                            <div class="item">
-                                <img src="~/Images/images_layout/lamborghini-centenario-2017-1600-01-1514410005837.jpg" style="width:1140px;height:200px;" />
-                            </div>
-
-                            <div class="item">
-                                <img src="~/Images/images_layout/tải xuống (2).jpg" style="width:1140px;height:200px;" />
-                            </div>
-
-                            <div class="item">
-                                <img src="~/Images/images_layout/tải xuống.jpg" style="width:1140px;height:200px;" />
-                            </div>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="~/Images/images_layout/hinh-nen-sieu-xe-full-hd-cho-laptop-3.jpg" style="width:1140px;height:200px;" />
                         </div>
 
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-sm-12" style="padding-top:20px">
-                    <div class="row form-group">
-                        <div class="col-sm-4" style="font-size:x-large;font-weight:bold">
-                            SẢN PHẨM NỔI BẬT
+                        <div class="item">
+                            <img src="~/Images/images_layout/lamborghini-centenario-2017-1600-01-1514410005837.jpg" style="width:1140px;height:200px;" />
                         </div>
 
-                        <div class="col-sm-8" style="padding-top:30px">
-                            <ul class="list-inline">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Menu 1</a></li>
-                                <li><a href="#">Menu 2</a></li>
-                                <li><a href="#">Menu 3</a></li>
-                            </ul>
+                        <div class="item">
+                            <img src="~/Images/images_layout/tải xuống (2).jpg" style="width:1140px;height:200px;" />
+                        </div>
+
+                        <div class="item">
+                            <img src="~/Images/images_layout/tải xuống.jpg" style="width:1140px;height:200px;" />
                         </div>
                     </div>
 
-                    <div class="row form-group">
-                        <ul style="list-style:none" class="listProduct">
-                            @for (var i = 0; i < 10; i++)
-                            {
-                                <li class="col-sm-3" style="margin:0px;padding:0px">
-                                    <div class="col-sm-12">
-                                        <a href="#">
-                                            <img src="~/Images/images_layout/hinh-nen-sieu-xe-full-hd-cho-laptop-3.jpg" class="w-100 img-thumbnail" />
-                                        </a>
-                                    </div>
-
-                                    <div class="col-sm-12 card-title" style="max-height:40px;overflow-y:hidden;margin-top:15px">
-                                        <a href="" >Quy trình làm bột lá nếp (bột lá dứa) đảm bảo chất lượng VSATTP</a>
-                                    </div>
-
-                                    <div class="col-sm-12" style="margin-top:15px">
-                                        <span class="col-sm-6" style="color:red;font-size:13pt;font-weight:bold;text-align:center !important">80000₫</span>
-                                        <span class="col-sm-6" style="text-decoration:line-through;text-align:center !important;font-weight:bold;color:#898989">80000₫</span>
-                                    </div>
-                                </li>
-                            }
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-sm-12">
-                    <div class="col-sm-4">
-                        SẢN PHẨM NỔI BÂT
-                    </div>
-
-                </div>
-
-                <div class="col-sm-12">
-                    <div class="col-sm-4">
-                        SẢN PHẨM NỔI BÂT
-                    </div>
-
-                </div>
-
-                <div class="col-sm-12">
-                    <div class="col-sm-4">
-                        SẢN PHẨM NỔI BÂT
-                    </div>
-
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
 
-            <div class="col-sm-3">
-                <div class="col-sm-12">
-                    link yt
-                </div>
+            <div class="col-sm-12" style="padding-top:20px">
+                <div class="row form-group">
+                    <div class="col-sm-4 title" >
+                        SẢN PHẨM NỔI BẬT
+                    </div>
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12" style="text-transform:uppercase;color:#fff;background:#00591d;text-align:center;border-radius:4px 4px 0px 0px">
-                        <h5>Cẩm nang nông sản</h5>
+                    <div class="col-sm-8" style="padding-top:30px">
+                        <ul class="list-inline">
+                            <li><a href="#">Bột lá nếp(lá dứa)</a></li>
+                            <li><a href="#">Bột củ dền</a></li>
+                            <li><a href="#">Bột gấc</a></li>
+                            <li><a href="#">Bột lá cẩm</a></li>
+                            <li><a href="#">Tinh bột nghệ</a></li>
+                        </ul>
                     </div>
                 </div>
+                <!--San pham hot-->
+                <div class="row form-group">
+                    <ul style="list-style:none" class="listProduct">
+                        @foreach (var item in ViewBag.hotProducts)
+                        {
+                            <li class="col-sm-3" style="margin:0px;padding:0px">
+                                <div class="col-sm-12">
+                                    <a href="#">
+                                        @if (System.IO.File.Exists(Directory.GetCurrentDirectory() + "\\wwwroot\\Upload\\ImageProducts\\" + item.Image))
+                                        {
+                                            <img src="~/Upload/ImageProducts/@item.Image" class="w-100 img-thumbnail" style="max-width:190px;height:120px;border:0px"/>
+                                        }
+                                    </a>
+                                </div>
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12" style="text-transform:uppercase;color:#fff;background:#00591d;text-align:center;border-radius:4px 4px 0px 0px">
-                        <h5>Đội ngũ hỗ trợ</h5>
-                    </div>
+                                <div class="col-sm-12 card-title" style="max-height:40px;overflow-y:hidden;margin-top:15px">
+                                    <a href="" class="tieude">@item.Name</a>
+                                </div>
+
+                                <div class="col-sm-12" style="margin-top:15px">
+                                    @if (item.Discount != 0)
+                                    {
+                                        <span class="col-sm-6" style="color:red;font-size:13pt;font-weight:bold;text-align:center !important;padding:0px">@item.Price ₫</span>
+                                        <span class="col-sm-6" style="text-decoration:line-through;text-align:center !important;font-weight:bold;color:#898989;padding:0px">@item.Discount ₫</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="col-sm-6" style="color:red;font-size:13pt;font-weight:bold;text-align:center !important;padding:0px">@item.Price ₫</span>
+                                    }
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <!--end sp hot-->
+            </div>
+
+            <div class="col-sm-12">
+                <div class="col-sm-12 title">
+                    SẢN PHẨM ĐỒ UỐNG & GIẢM CÂN
                 </div>
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12" style="text-transform:uppercase;color:#fff;background:#00591d;text-align:center;border-radius:4px 4px 0px 0px">
-                        <h5>Bột tạo màu tự nhiên</h5>
-                    </div>
+                <div class="row form-group">
+                    <ul style="list-style:none" class="listProduct">
+                        @foreach (var item in ViewBag.Products10)
+                        {
+                        <li class="col-sm-3" style="margin:0px;padding:0px">
+                            <div class="col-sm-12">
+                                <a href="#">
+                                    @if (System.IO.File.Exists(Directory.GetCurrentDirectory() + "\\wwwroot\\Upload\\ImageProducts\\" + item.Image))
+                                    {
+                                        <img src="~/Upload/ImageProducts/@item.Image" class="w-100 img-thumbnail" style="max-width:190px;height:120px;border:0px" />
+                                    }
+                                </a>
+                            </div>
+
+                            <div class="col-sm-12 card-title" style="max-height:40px;overflow-y:hidden;margin-top:15px">
+                                <a href="">@item.Name</a>
+                            </div>
+
+                            <div class="col-sm-12" style="margin-top:15px">
+                                @if (item.Discount != 0)
+                                {
+                                    <span class="col-sm-6" style="color:red;font-size:13pt;font-weight:bold;text-align:center !important;padding:0px">@item.Price ₫</span>
+                                    <span class="col-sm-6" style="text-decoration:line-through;text-align:center !important;font-weight:bold;color:#898989;padding:0px">@item.Discount ₫</span>
+                                }
+                                else
+                                {
+                                    <span class="col-sm-6" style="color:red;font-size:13pt;font-weight:bold;text-align:center !important;padding:0px">@item.Price ₫</span>
+                                }
+                            </div>
+                        </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="col-sm-12 title">
+                    THỰC DƯỠNG & ĂN CHAY
                 </div>
 
-                <div class="col-sm-12">
-                    <div class="col-sm-12" style="text-transform:uppercase;color:#fff;background:#00591d;text-align:center;border-radius:4px 4px 0px 0px">
-                        <h5>Sản phẩm tại chợ quê</h5>
-                    </div>
+                <div class="row form-group">
+                    <ul style="list-style:none" class="listProduct">
+                        @foreach (var item in ViewBag.Products11)
+                        {
+                        <li class="col-sm-3" style="margin:0px;padding:0px">
+                            <div class="col-sm-12">
+                                <a href="#">
+                                    @if (System.IO.File.Exists(Directory.GetCurrentDirectory() + "\\wwwroot\\Upload\\ImageProducts\\" + item.Image))
+                                    {
+                                        <img src="~/Upload/ImageProducts/@item.Image" class="w-100 img-thumbnail" style="max-width:190px;height:120px;border:0px" />
+                                    }
+                                </a>
+                            </div>
+
+                            <div class="col-sm-12 card-title" style="max-height:40px;overflow-y:hidden;margin-top:15px">
+                                <a href="">@item.Name</a>
+                            </div>
+
+                            <div class="col-sm-12" style="margin-top:15px">
+                                @if (item.Discount != 0)
+                                {
+                                    <span class="col-sm-6" style="color:red;font-size:13pt;font-weight:bold;text-align:center !important;padding:0px">@item.Price ₫</span>
+                                    <span class="col-sm-6" style="text-decoration:line-through;text-align:center !important;font-weight:bold;color:#898989;padding:0px">@item.Discount ₫</span>
+                                }
+                                else
+                                {
+                                    <span class="col-sm-6" style="color:red;font-size:13pt;font-weight:bold;text-align:center !important;padding:0px">@item.Price ₫</span>
+                                }
+                            </div>
+                        </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="col-sm-10 title">
+                    HẠT DINH DƯỠNG
+                </div>
+
+                <div class="row form-group">
+                    <ul style="list-style:none" class="listProduct">
+                        @foreach (var item in ViewBag.Products11)
+                        {
+                        <li class="col-sm-3" style="margin:0px;padding:0px">
+                            <div class="col-sm-12">
+                                <a href="#">
+                                    @if (System.IO.File.Exists(Directory.GetCurrentDirectory() + "\\wwwroot\\Upload\\ImageProducts\\" + item.Image))
+                                    {
+                                        <img src="~/Upload/ImageProducts/@item.Image" class="w-100 img-thumbnail" style="max-width:190px;height:120px;border:0px" />
+                                    }
+                                </a>
+                            </div>
+
+                            <div class="col-sm-12 card-title" style="max-height:40px;overflow-y:hidden;margin-top:15px">
+                                <a href="">@item.Name</a>
+                            </div>
+
+                            <div class="col-sm-12" style="margin-top:15px">
+                                @if (item.Discount != 0)
+                                {
+                                    <span class="col-sm-6" style="color:red;font-size:13pt;font-weight:bold;text-align:center !important;padding:0px">@item.Price ₫</span>
+                                    <span class="col-sm-6" style="text-decoration:line-through;text-align:center !important;font-weight:bold;color:#898989;padding:0px">@item.Discount ₫</span>
+                                }
+                                else
+                                {
+                                    <span class="col-sm-6" style="color:red;font-size:13pt;font-weight:bold;text-align:center !important;padding:0px">@item.Price ₫</span>
+                                }
+                            </div>
+                        </li>
+                        }
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <style>
+        <div class="col-sm-3">
+            <div class="col-sm-12">
+                link yt
+            </div>
+
+            <div class="col-sm-12">
+                <div class="col-sm-12" style="text-transform:uppercase;color:#fff;background:#00591d;text-align:center;border-radius:4px 4px 0px 0px">
+                    <h5>Cẩm nang nông sản</h5>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="col-sm-12" style="text-transform:uppercase;color:#fff;background:#00591d;text-align:center;border-radius:4px 4px 0px 0px">
+                    <h5>Đội ngũ hỗ trợ</h5>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="col-sm-12" style="text-transform:uppercase;color:#fff;background:#00591d;text-align:center;border-radius:4px 4px 0px 0px">
+                    <h5>Bột tạo màu tự nhiên</h5>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="col-sm-12" style="text-transform:uppercase;color:#fff;background:#00591d;text-align:center;border-radius:4px 4px 0px 0px">
+                    <h5>Sản phẩm tại chợ quê</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .listProduct {
+            /*padding-top:50px*/
+        }
+
             .listProduct li a {
                 color: #0A4E0F;
                 line-height: 20px;
@@ -150,11 +267,56 @@
                 font-weight: 700
             }
 
-            .listProduct li a:hover{
-                color:red
-            }
-        </style>
+                .listProduct li a:hover {
+                    color: red
+                }
 
-    </section>
+            .listProduct li .tieude {
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-variant-numeric: normal;
+                font-variant-east-asian: normal;
+                font-weight: 500;
+                font-stretch: normal;
+                font-size: 15px;
+                line-height: 20px;
+                font-family: Roboto, sans-serif;
+                color: #0A4E0F;
+            }
+
+        .title {
+            font-family: Gods_word, sans-serif;
+            line-height: normal;
+            font-size: 22px;
+            font-weight: 400;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-variant-east-asian: normal;
+            font-stretch: normal
+        }
+
+        .list-inline li a {
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-variant-numeric: normal;
+            font-variant-east-asian: normal;
+            font-weight: 400;
+            font-stretch: normal;
+            font-size: 13px;
+            line-height: 20px;
+            font-family: Roboto, sans-serif;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .list-inline li:hover a{
+            color:red
+        }
+    </style>
+
+</section>
 
 
